@@ -1,0 +1,127 @@
+---
+title: "Datos ordenados y el tidyverse"
+author: "Jorge Leonardo López Martínez"
+title-slide-attributes:
+    data-background-image: "img/tidyverse_war.jpg"
+    data-background-size: contain # La otra opción es cover.
+execute:
+  echo: true
+  #fig-width: 6
+  #fig-height: 6
+format:
+    revealjs:
+        #theme: dark
+        footer: "[R amigable](https://leo4luffy.github.io/R_amigable.github.io/index.html)"
+lang: es
+---
+
+## Objetivos de la lección
+
+- Hablaremos sobre que consiste los datos ordenados y algunos paquetes del tidyverse.
+
+- Aprenderemos sobre como pasar de datos desordenados a ordenados mediante el uso del paquete <span style="color: orange">tidyr</span>.
+
+## Ciencia de datos
+
+El termino científico de datos abarca a todas las personas que en forma cotidiana aplican técnicas de programación para el análisis de datos. Los científicos de datos combinan una variedad de habilidades, entre ellas:
+
+```{r}
+#| eval: true
+#| echo: false
+#| out-width: '54%'
+#| fig-align: 'center'
+
+library(knitr)
+include_graphics('img/Ciencia_datos.png')
+```
+
+## Ciencia de datos
+
+El proceso de análisis de datos es:
+
+```{r}
+#| eval: true
+#| echo: false
+#| out-width: '54%'
+#| fig-align: 'center'
+
+library(knitr)
+include_graphics('img/EDA.png')
+```
+
+Todo el proceso anterior, el cientifico de datos lo lleva a cabo mediante la programación.
+
+## El tidyverse
+
+El tidyverse consiste de una colección de paquetes del R que trabajan en armonía con el objetivo de cubrir todo el espectro del análisis de datos dentro del R. Algunos de estos paquetes son:
+
+::: columns
+
+::: {.column width="50%" style="text-align: center;"}
+
+```{r}
+#| eval: true
+#| echo: false
+#| out-width: '54%'
+#| fig-align: 'center'
+
+library(knitr)
+include_graphics('img/tidyr.png')
+```
+
+:::
+
+::: {.column width="50%" style="text-align: center;"}
+
+```{r}
+#| eval: true
+#| echo: false
+#| out-width: '54%'
+#| fig-align: 'center'
+
+library(knitr)
+include_graphics('img/dplyr.png')
+```
+
+:::
+
+:::
+
+## El tidyverse
+
+Existen dos formas de usar los paquetes del tidyverse:
+
+::: columns
+
+::: {.column width="50%" style="text-align: justify;"}
+
+De manera individual, instalando cada paquete por medio de la función <span style="color: orange">install.packages()</span>, y cargandolos con la función <span style="color: orange">library()</span>.
+
+```{r}
+#| eval: false
+#| echo: true
+
+install.packages('tidyr')
+library(tidyr)
+install.packages('dplyr')
+library(dplyr)
+```
+
+:::
+
+::: {.column width="50%" style="text-align: justify;"}
+
+De manera conjunta, instalando todos los paquetes del <span style="color: orange">tidyverse</span>.
+
+```{r}
+#| eval: false
+#| echo: true
+
+install.packages('tidyverse')
+library(tidyverse)
+```
+
+:::
+
+:::
+
