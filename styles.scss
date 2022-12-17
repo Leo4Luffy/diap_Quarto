@@ -1,0 +1,70 @@
+/*-- scss:defaults --*/
+
+// fonts
+$font-family-sans-serif: "Palatino Linotype", "Book Antiqua", Palatino,
+  FreeSerif, serif !default;
+
+// colors
+$link-color: #51483d !default;
+
+// headings
+$presentation-heading-font: "Palatino Linotype", "Book Antiqua", Palatino,
+  FreeSerif, serif !default;
+$presentation-heading-color: #000000 !default;
+
+/*-- scss:rules --*/
+
+.title-center {
+  font-size: 1.75em;
+  text-align: center;
+  margin: auto;
+}
+
+.half-image {
+  width: 64%;
+  margin: auto;
+}
+
+.author {
+  font-size: 1.05em;
+  font-weight: 400;
+  text-align: left;
+  position: absolute;
+  left: 30px;
+  bottom: 30px;
+}
+
+.credit {
+  text-align: right;
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+}
+
+.center {
+  font-size: 1.25em;
+  margin: auto;
+  text-align: center;
+}
+ 
+.reveal a {
+  color: #1E1E1E;
+  line-height: 1em;
+  font-weight: 400;
+}
+
+.reveal a:hover {
+  font-weight: 600;
+}
+
+.small-1 {
+  font-size: 0.75em;
+}
+
+.small-2 {
+  font-size: 0.50em;
+}
+
+.small-3 {
+  font-size: 0.65em;
+}

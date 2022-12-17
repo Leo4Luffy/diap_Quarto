@@ -1,21 +1,44 @@
 ---
-title: "Datos ordenados y el tidyverse"
-author: "Jorge Leonardo López Martínez"
-title-slide-attributes:
-    data-background-image: "img/tidyverse_war.jpg"
-    data-background-size: contain # La otra opción es cover.
-execute:
-  echo: true
-  #fig-width: 6
-  #fig-height: 6
+date: "`r as.Date(Sys.time())`"
 format:
     revealjs:
-        #theme: dark
+        theme: [styles.scss]
+        slide-number: true
+        center-title-slide: false
         footer: "[R amigable](https://leo4luffy.github.io/R_amigable.github.io/index.html)"
+execute:
+  echo: false
+  #fig-width: 6
+  #fig-height: 6
 lang: es
 ---
 
+:::{.title-center}
+Datos ordenados y el tidyverse
+:::
+
+:::{.center}
+una introducción amigable sobre el <span style="color: orange">R</span>
+:::
+
+:::{.half-image}
+![](img/tidyverse_war.jpg)
+:::
+
+:::{.author}
+Jorge Leonardo López Martínez<br>
+Estudiante de doctorado
+:::
+
 ## Objetivos de la lección
+
+```{r}
+
+#| eval: true
+#| echo: false
+
+pacman::p_load(knitr, tidyverse, DSR, gt, flair)
+```
 
 - Hablaremos sobre que consiste los datos ordenados y algunos paquetes del tidyverse.
 
@@ -31,7 +54,6 @@ El termino científico de datos abarca a todas las personas que en forma cotidia
 #| out-width: '54%'
 #| fig-align: 'center'
 
-library(knitr)
 include_graphics('img/Ciencia_datos.png')
 ```
 
@@ -45,7 +67,6 @@ El proceso de análisis de datos es:
 #| out-width: '54%'
 #| fig-align: 'center'
 
-library(knitr)
 include_graphics('img/EDA.png')
 ```
 
@@ -65,7 +86,6 @@ El tidyverse consiste de una colección de paquetes del R que trabajan en armon�
 #| out-width: '54%'
 #| fig-align: 'center'
 
-library(knitr)
 include_graphics('img/tidyr.png')
 ```
 
@@ -79,7 +99,6 @@ include_graphics('img/tidyr.png')
 #| out-width: '54%'
 #| fig-align: 'center'
 
-library(knitr)
 include_graphics('img/dplyr.png')
 ```
 
@@ -125,3 +144,288 @@ library(tidyverse)
 
 :::
 
+## Datos ordenados
+
+En la realidad, los conjuntos de datos vienen en muchas formas diferentes:
+
+___Forma 1___
+
+:::small-1
+
+```{r}
+#| eval: true
+#| echo: false
+
+tribble(
+  ~País, ~Año, ~Casos, ~Población,
+  'Afganistan', 1999, 745, 19987071,
+  'Afganistan', 2000, 2666, 20595360,
+  'Brasil', 1999, 37737, 172006362,
+  'Brasil', 2000, 80488, 174504898,
+  'China', 1999, 212258, 1272915272,
+  'China', 2000, 213766, 1280428583
+  ) %>%
+  gt() %>%
+  opt_table_lines()
+```
+
+:::
+
+## Datos ordenados
+
+En la realidad, los conjuntos de datos vienen en muchas formas diferentes:
+
+___Forma 2___
+
+:::small-2
+
+```{r}
+#| eval: true
+#| echo: false
+
+tribble(
+  ~País, ~Año, ~Tipo, ~Conteo,
+  'Afganistan', 1999, 'Casos', 745,
+  'Afganistan', 1999, 'Población', 19987071,
+  'Afganistan', 2000, 'Casos', 2666,
+  'Afganistan', 2000, 'Población', 20595360,
+  'Brasil', 1999, 'Casos', 37737,
+  'Brasil', 1999, 'Población', 172006362,
+  'Brasil', 2000, 'Casos', 80488,
+  'Brasil', 2000, 'Población', 174504898,
+  'China', 1999, 'Casos', 212258,
+  'China', 1999, 'Población', 1272915272,
+  'China', 2000, 'Casos', 213766,
+  'China', 2000, 'Población', 1280428583
+  ) %>%
+  gt() %>%
+  opt_table_lines()
+```
+
+:::
+
+## Datos ordenados
+
+En la realidad, los conjuntos de datos vienen en muchas formas diferentes:
+
+___Forma 3___
+
+:::small-1
+
+```{r}
+#| eval: true
+#| echo: false
+
+tribble(
+  ~País, ~Año, ~Tasa,
+  'Afganistan', 1999, '745/19987071',
+  'Afganistan', 2000, '2666/20595360',
+  'Brasil', 1999, '37737/172006362',
+  'Brasil', 2000, '80488/174504898',
+  'China', 1999, '212258/1272915272',
+  'China', 2000, '213766/1280428583'
+  ) %>%
+  gt() %>%
+  opt_table_lines()
+```
+
+:::
+
+## Datos ordenados
+
+En la realidad, los conjuntos de datos vienen en muchas formas diferentes:
+
+___Forma 4___
+
+::: columns
+
+::: {.column width="50%" style="text-align: justify;"}
+
+:::small-3
+
+```{r}
+#| eval: true
+#| echo: false
+
+tribble(
+  ~País, ~'1999', ~'2000',
+  'Afganistan', 745, 2666,
+  'Brasil', 37737, 80488,
+  'China', 212258, 213766
+  ) %>%
+  gt() %>%
+  opt_table_lines()
+```
+
+:::
+
+:::
+
+::: {.column width="50%" style="text-align: justify;"}
+
+:::small-3
+
+```{r}
+#| eval: true
+#| echo: false
+
+tribble(
+  ~País, ~'1999', ~'2000',
+  'Afganistan', 19987071, 20595360,
+  'Brasil', 172006362, 174504898,
+  'China', 1272915272, 1280428583
+  ) %>%
+  gt() %>%
+  opt_table_lines()
+```
+
+:::
+
+:::
+
+:::
+
+## Datos ordenados
+
+Los conjuntos de datos anteriores muestran los mismos datos organizados en cuatro formas diferentes. Sin embargo solo uno de ellos, el que es considerado como un __dato ordenado__, será más fácil para trabajar en <span style="color: orange">R</span>.
+
+Para que un conjunto de datos sea considerado como dato ordenado, debe cumplir tres reglas:
+
++ Cada variable debe colocarse en una columna:
+
+```{r}
+#| eval: true
+#| echo: false
+#| out-width: '54%'
+#| fig-align: 'center'
+
+ggplot() +
+  geom_blank() +
+  annotate(geom = 'rect', xmin = 3.0, xmax = 3.5, ymin = 1.0, ymax = 1.5, colour = 'black', fill = 'white', size = 3.2) +
+  annotate(geom = 'rect', xmin = 3.0, xmax = 3.5, ymin = 1.5, ymax = 2.0, colour = 'black', fill = 'white', size = 3.2) +
+  annotate(geom = 'rect', xmin = 3.0, xmax = 3.5, ymin = 2.0, ymax = 2.5, colour = 'black', fill = 'white', size = 3.2) +
+  annotate(geom = 'rect', xmin = 3.0, xmax = 3.5, ymin = 2.5, ymax = 3.0, colour = 'black', fill = 'white', size = 3.2) +
+  annotate(geom = 'segment', x = 3.25, xend = 3.25, y = 0.9, yend = 3.1, colour = 'black', linetype = 'twodash', size = 3.2) +
+  annotate(geom = 'text', x = 3.25, y = 3.39, label = 'variable', family = 'gochi', size = 18, colour = 'black', angle = 35) +
+  annotate(geom = 'rect', xmin = 3.5, xmax = 4.0, ymin = 1.0, ymax = 1.5, colour = 'black', fill = 'white', size = 3.2) +
+  annotate(geom = 'rect', xmin = 3.5, xmax = 4.0, ymin = 1.5, ymax = 2.0, colour = 'black', fill = 'white', size = 3.2) +
+  annotate(geom = 'rect', xmin = 3.5, xmax = 4.0, ymin = 2.0, ymax = 2.5, colour = 'black', fill = 'white', size = 3.2) +
+  annotate(geom = 'rect', xmin = 3.5, xmax = 4.0, ymin = 2.5, ymax = 3.0, colour = 'black', fill = 'white', size = 3.2) +
+  annotate(geom = 'segment', x = 3.75, xend = 3.75, y = 0.9, yend = 3.1, colour = 'black', linetype = 'twodash', size = 3.2) +
+  annotate(geom = 'text', x = 3.75, y = 3.39, label = 'variable', family = 'gochi', size = 18, colour = 'black', angle = 35) +
+  annotate(geom = 'rect', xmin = 4.0, xmax = 4.5, ymin = 1.0, ymax = 1.5, colour = 'black', fill = 'white', size = 3.2) +
+  annotate(geom = 'rect', xmin = 4.0, xmax = 4.5, ymin = 1.5, ymax = 2.0, colour = 'black', fill = 'white', size = 3.2) +
+  annotate(geom = 'rect', xmin = 4.0, xmax = 4.5, ymin = 2.0, ymax = 2.5, colour = 'black', fill = 'white', size = 3.2) +
+  annotate(geom = 'rect', xmin = 4.0, xmax = 4.5, ymin = 2.5, ymax = 3.0, colour = 'black', fill = 'white', size = 3.2) +
+  annotate(geom = 'segment', x = 4.25, xend = 4.25, y = 0.9, yend = 3.1, colour = 'black', linetype = 'twodash', size = 3.2) +
+  annotate(geom = 'text', x = 4.25, y = 3.39, label = 'variable', family = 'gochi', size = 18, colour = 'black', angle = 35) +
+  annotate(geom = 'rect', xmin = 4.5, xmax = 5.0, ymin = 1.0, ymax = 1.5, colour = 'black', fill = 'white', size = 3.2) +
+  annotate(geom = 'rect', xmin = 4.5, xmax = 5.0, ymin = 1.5, ymax = 2.0, colour = 'black', fill = 'white', size = 3.2) +
+  annotate(geom = 'rect', xmin = 4.5, xmax = 5.0, ymin = 2.0, ymax = 2.5, colour = 'black', fill = 'white', size = 3.2) +
+  annotate(geom = 'rect', xmin = 4.5, xmax = 5.0, ymin = 2.5, ymax = 3.0, colour = 'black', fill = 'white', size = 3.2) +
+  annotate(geom = 'segment', x = 4.75, xend = 4.75, y = 0.9, yend = 3.1, colour = 'black', linetype = 'twodash', size = 3.2) +
+  annotate(geom = 'text', x = 4.75, y = 3.39, label = 'variable', family = 'gochi', size = 18, colour = 'black', angle = 35) +
+  scale_y_continuous(limits = c(0.88, 3.7)) +
+  theme_void() +
+  theme(axis.text = element_blank(),
+        axis.ticks = element_blank(),
+        axis.title = element_blank())
+```
+
+## Datos ordenados
+
+Los conjuntos de datos anteriores muestran los mismos datos organizados en cuatro formas diferentes. Sin embargo solo uno de ellos, el que es considerado como un __dato ordenado__, será más fácil para trabajar en <span style="color: orange">R</span>.
+
+Para que un conjunto de datos sea considerado como dato ordenado, debe cumplir tres reglas:
+
++ Cada observación debe colocarse en una fila:
+
+```{r}
+#| eval: true
+#| echo: false
+#| out-width: '54%'
+#| fig-align: 'center'
+
+ggplot() +
+  geom_blank() +
+  annotate(geom = 'rect', xmin = 3.0, xmax = 3.5, ymin = 1.0, ymax = 1.5, colour = 'black', fill = 'white', size = 3.2) +
+  annotate(geom = 'rect', xmin = 3.0, xmax = 3.5, ymin = 1.5, ymax = 2.0, colour = 'black', fill = 'white', size = 3.2) +
+  annotate(geom = 'rect', xmin = 3.0, xmax = 3.5, ymin = 2.0, ymax = 2.5, colour = 'black', fill = 'white', size = 3.2) +
+  annotate(geom = 'rect', xmin = 3.0, xmax = 3.5, ymin = 2.5, ymax = 3.0, colour = 'black', fill = 'white', size = 3.2) +
+  annotate(geom = 'rect', xmin = 3.5, xmax = 4.0, ymin = 1.0, ymax = 1.5, colour = 'black', fill = 'white', size = 3.2) +
+  annotate(geom = 'rect', xmin = 3.5, xmax = 4.0, ymin = 1.5, ymax = 2.0, colour = 'black', fill = 'white', size = 3.2) +
+  annotate(geom = 'rect', xmin = 3.5, xmax = 4.0, ymin = 2.0, ymax = 2.5, colour = 'black', fill = 'white', size = 3.2) +
+  annotate(geom = 'rect', xmin = 3.5, xmax = 4.0, ymin = 2.5, ymax = 3.0, colour = 'black', fill = 'white', size = 3.2) +
+  annotate(geom = 'rect', xmin = 4.0, xmax = 4.5, ymin = 1.0, ymax = 1.5, colour = 'black', fill = 'white', size = 3.2) +
+  annotate(geom = 'rect', xmin = 4.0, xmax = 4.5, ymin = 1.5, ymax = 2.0, colour = 'black', fill = 'white', size = 3.2) +
+  annotate(geom = 'rect', xmin = 4.0, xmax = 4.5, ymin = 2.0, ymax = 2.5, colour = 'black', fill = 'white', size = 3.2) +
+  annotate(geom = 'rect', xmin = 4.0, xmax = 4.5, ymin = 2.5, ymax = 3.0, colour = 'black', fill = 'white', size = 3.2) +
+  annotate(geom = 'rect', xmin = 4.5, xmax = 5.0, ymin = 1.0, ymax = 1.5, colour = 'black', fill = 'white', size = 3.2) +
+  annotate(geom = 'rect', xmin = 4.5, xmax = 5.0, ymin = 1.5, ymax = 2.0, colour = 'black', fill = 'white', size = 3.2) +
+  annotate(geom = 'rect', xmin = 4.5, xmax = 5.0, ymin = 2.0, ymax = 2.5, colour = 'black', fill = 'white', size = 3.2) +
+  annotate(geom = 'rect', xmin = 4.5, xmax = 5.0, ymin = 2.5, ymax = 3.0, colour = 'black', fill = 'white', size = 3.2) +
+  annotate(geom = 'segment', x = 2.9, xend = 5.1, y = 1.25, yend = 1.25, colour = 'black', linetype = 'twodash', size = 3.2) +
+  annotate(geom = 'segment', x = 2.9, xend = 5.1, y = 1.75, yend = 1.75, colour = 'black', linetype = 'twodash', size = 3.2) +
+  annotate(geom = 'segment', x = 2.9, xend = 5.1, y = 2.25, yend = 2.25, colour = 'black', linetype = 'twodash', size = 3.2) +
+  annotate(geom = 'segment', x = 2.9, xend = 5.1, y = 2.75, yend = 2.75, colour = 'black', linetype = 'twodash', size = 3.2) +
+  annotate(geom = 'text', x = 2.7, y = 1.25, label = 'fila', family = 'gochi', size = 18, colour = 'black', angle = 35) +
+  annotate(geom = 'text', x = 2.7, y = 1.75, label = 'fila', family = 'gochi', size = 18, colour = 'black', angle = 35) +
+  annotate(geom = 'text', x = 2.7, y = 2.25, label = 'fila', family = 'gochi', size = 18, colour = 'black', angle = 35) +
+  annotate(geom = 'text', x = 2.7, y = 2.75, label = 'fila', family = 'gochi', size = 18, colour = 'black', angle = 35) +
+  scale_x_continuous(limits = c(2.6, 5.2)) +
+  theme_void() +
+  theme(axis.text = element_blank(),
+        axis.ticks = element_blank(),
+        axis.title = element_blank())
+```
+
+## Datos ordenados
+
+Los conjuntos de datos anteriores muestran los mismos datos organizados en cuatro formas diferentes. Sin embargo solo uno de ellos, el que es considerado como un __dato ordenado__, será más fácil para trabajar en <span style="color: orange">R</span>.
+
+Para que un conjunto de datos sea considerado como dato ordenado, debe cumplir tres reglas:
+
++ Cada valor debe colocarse en una celda:
+
+```{r}
+#| eval: true
+#| echo: false
+#| out-width: '54%'
+#| fig-align: 'center'
+
+Valores <- data.frame(
+  x = c(3.25, 3.25, 3.25, 3.25, 3.75, 3.75, 3.75, 3.75, 4.25, 4.25, 4.25, 4.25, 4.75, 4.75, 4.75, 4.75),
+  y = c(1.25, 1.75, 2.25, 2.75, 1.25, 1.75, 2.25, 2.75, 1.25, 1.75, 2.25, 2.75, 1.25, 1.75, 2.25, 2.75)
+)
+
+ggplot() +
+  geom_blank() +
+  annotate(geom = 'rect', xmin = 3.0, xmax = 3.5, ymin = 1.0, ymax = 1.5, colour = 'black', fill = 'white', size = 3.2) +
+  annotate(geom = 'rect', xmin = 3.0, xmax = 3.5, ymin = 1.5, ymax = 2.0, colour = 'black', fill = 'white', size = 3.2) +
+  annotate(geom = 'rect', xmin = 3.0, xmax = 3.5, ymin = 2.0, ymax = 2.5, colour = 'black', fill = 'white', size = 3.2) +
+  annotate(geom = 'rect', xmin = 3.0, xmax = 3.5, ymin = 2.5, ymax = 3.0, colour = 'black', fill = 'white', size = 3.2) +
+  annotate(geom = 'rect', xmin = 3.5, xmax = 4.0, ymin = 1.0, ymax = 1.5, colour = 'black', fill = 'white', size = 3.2) +
+  annotate(geom = 'rect', xmin = 3.5, xmax = 4.0, ymin = 1.5, ymax = 2.0, colour = 'black', fill = 'white', size = 3.2) +
+  annotate(geom = 'rect', xmin = 3.5, xmax = 4.0, ymin = 2.0, ymax = 2.5, colour = 'black', fill = 'white', size = 3.2) +
+  annotate(geom = 'rect', xmin = 3.5, xmax = 4.0, ymin = 2.5, ymax = 3.0, colour = 'black', fill = 'white', size = 3.2) +
+  annotate(geom = 'rect', xmin = 4.0, xmax = 4.5, ymin = 1.0, ymax = 1.5, colour = 'black', fill = 'white', size = 3.2) +
+  annotate(geom = 'rect', xmin = 4.0, xmax = 4.5, ymin = 1.5, ymax = 2.0, colour = 'black', fill = 'white', size = 3.2) +
+  annotate(geom = 'rect', xmin = 4.0, xmax = 4.5, ymin = 2.0, ymax = 2.5, colour = 'black', fill = 'white', size = 3.2) +
+  annotate(geom = 'rect', xmin = 4.0, xmax = 4.5, ymin = 2.5, ymax = 3.0, colour = 'black', fill = 'white', size = 3.2) +
+  annotate(geom = 'rect', xmin = 4.5, xmax = 5.0, ymin = 1.0, ymax = 1.5, colour = 'black', fill = 'white', size = 3.2) +
+  annotate(geom = 'rect', xmin = 4.5, xmax = 5.0, ymin = 1.5, ymax = 2.0, colour = 'black', fill = 'white', size = 3.2) +
+  annotate(geom = 'rect', xmin = 4.5, xmax = 5.0, ymin = 2.0, ymax = 2.5, colour = 'black', fill = 'white', size = 3.2) +
+  annotate(geom = 'rect', xmin = 4.5, xmax = 5.0, ymin = 2.5, ymax = 3.0, colour = 'black', fill = 'white', size = 3.2) +
+  geom_point(data = Valores, aes(x, y), colour = 'black', fill = 'black', size = 9.4, alpha = 0.6) +
+  annotate(geom = 'segment', x = 2.8, xend = 3.25, y = 2.65, yend = 2.75, colour = 'black', size = 2.2) +
+  annotate(geom = 'text', x = 2.45, y = 2.65, label = 'valor', family = 'gochi', size = 18, colour = 'black') +
+  scale_x_continuous(limits = c(2.2, 5.2)) +
+  theme_void() +
+  theme(axis.text = element_blank(),
+        axis.ticks = element_blank(),
+        axis.title = element_blank())
+```
+
+## Ordenando los datos con el paquete <span style="color: orange">tidyr</span>
+
+El paquete <span style="color: orange">tidyr</span> tiene como objetivo ayudar a ordenar los datos desordenados. Para esto, este paquete contiene varias funciones:
