@@ -407,32 +407,46 @@
 <div class="cell">
 
 </div>
+<div class="small-4">
 <ul>
-<li><p>Hablaremos sobre que consiste los datos ordenados y algunos paquetes del tidyverse.</p></li>
-<li><p>Aprenderemos sobre como pasar de datos desordenados a ordenados mediante el uso del paquete <span style="color: orange">tidyr</span>.</p></li>
+<li>Hablaremos sobre que consiste los datos ordenados y algunos paquetes del tidyverse.</li>
 </ul>
+</div>
+<div class="small-4">
+<ul>
+<li>Aprenderemos sobre como pasar de datos desordenados a ordenados mediante el uso del paquete <span style="color: orange">tidyr</span>.</li>
+</ul>
+</div>
 </section>
 <section id="ciencia-de-datos" class="slide level2">
 <h2>Ciencia de datos</h2>
+<div class="small-4">
 <p>El termino científico de datos abarca a todas las personas que en forma cotidiana aplican técnicas de programación para el análisis de datos. Los científicos de datos combinan una variedad de habilidades, entre ellas:</p>
+</div>
 
-<img data-src="img/Ciencia_datos.png" style="width:54.0%" class="r-stretch quarto-figure-center"></section>
+<img data-src="img/Ciencia_datos.png" style="width:34.0%" class="r-stretch quarto-figure-center"></section>
 <section id="ciencia-de-datos-1" class="slide level2">
 <h2>Ciencia de datos</h2>
+<div class="small-4">
 <p>El proceso de análisis de datos es:</p>
+</div>
 
-<img data-src="img/EDA.png" style="width:54.0%" class="r-stretch quarto-figure-center"><p>Todo el proceso anterior, el cientifico de datos lo lleva a cabo mediante la programación.</p>
+<img data-src="img/EDA.png" style="width:34.0%" class="r-stretch quarto-figure-center"><div class="small-4">
+<p>Todo el proceso anterior, el cientifico de datos lo lleva a cabo mediante la programación.</p>
+</div>
 </section>
 <section id="el-tidyverse" class="slide level2">
 <h2>El tidyverse</h2>
+<div class="small-4">
 <p>El tidyverse consiste de una colección de paquetes del R que trabajan en armonía con el objetivo de cubrir todo el espectro del análisis de datos dentro del R. Algunos de estos paquetes son:</p>
+</div>
 <div class="columns">
 <div class="column" style="text-align: center;">
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="img/tidyr.png" style="width:54.0%"></p>
+<p><img data-src="img/tidyr.png" style="width:34.0%"></p>
 </figure>
 </div>
 </div>
@@ -442,7 +456,7 @@
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="img/dplyr.png" style="width:54.0%"></p>
+<p><img data-src="img/dplyr.png" style="width:34.0%"></p>
 </figure>
 </div>
 </div>
@@ -452,10 +466,15 @@
 </section>
 <section id="el-tidyverse-1" class="slide level2">
 <h2>El tidyverse</h2>
+<div class="small-4">
 <p>Existen dos formas de usar los paquetes del tidyverse:</p>
+</div>
 <div class="columns">
 <div class="column" style="text-align: justify;">
+<div class="small-4">
 <p>De manera individual, instalando cada paquete por medio de la función <span style="color: orange">install.packages()</span>, y cargandolos con la función <span style="color: orange">library()</span>.</p>
+</div>
+<p><br></p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">install.packages</span>(<span class="st">'tidyr'</span>)</span>
 <span id="cb1-2"><a href="#cb1-2"></a><span class="fu">library</span>(tidyr)</span>
@@ -463,7 +482,10 @@
 <span id="cb1-4"><a href="#cb1-4"></a><span class="fu">library</span>(dplyr)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div><div class="column" style="text-align: justify;">
+<div class="small-4">
 <p>De manera conjunta, instalando todos los paquetes del <span style="color: orange">tidyverse</span>.</p>
+</div>
+<p><br></p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">install.packages</span>(<span class="st">'tidyverse'</span>)</span>
 <span id="cb2-2"><a href="#cb2-2"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -473,18 +495,21 @@
 </section>
 <section id="datos-ordenados" class="slide level2">
 <h2>Datos ordenados</h2>
+<div class="small-4">
 <p>En la realidad, los conjuntos de datos vienen en muchas formas diferentes:</p>
+</div>
+<p><br></p>
 <p><strong><em>Forma 1</em></strong></p>
 <div class="small-1">
 <div class="cell">
 <div class="cell-output-display">
 
-<div id="fkfavmkebc" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="uwuzjrsjgm" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-:where(#fkfavmkebc) .gt_table {
+:where(#uwuzjrsjgm) .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -509,7 +534,7 @@
   border-left-color: #D3D3D3;
 }
 
-:where(#fkfavmkebc) .gt_heading {
+:where(#uwuzjrsjgm) .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -521,7 +546,7 @@
   border-right-color: #D3D3D3;
 }
 
-:where(#fkfavmkebc) .gt_title {
+:where(#uwuzjrsjgm) .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -531,7 +556,7 @@
   border-bottom-width: 0;
 }
 
-:where(#fkfavmkebc) .gt_subtitle {
+:where(#uwuzjrsjgm) .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -541,13 +566,13 @@
   border-top-width: 0;
 }
 
-:where(#fkfavmkebc) .gt_bottom_border {
+:where(#uwuzjrsjgm) .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-:where(#fkfavmkebc) .gt_col_headings {
+:where(#uwuzjrsjgm) .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -562,7 +587,7 @@
   border-right-color: #D3D3D3;
 }
 
-:where(#fkfavmkebc) .gt_col_heading {
+:where(#uwuzjrsjgm) .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -582,7 +607,7 @@
   overflow-x: hidden;
 }
 
-:where(#fkfavmkebc) .gt_column_spanner_outer {
+:where(#uwuzjrsjgm) .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -594,15 +619,15 @@
   padding-right: 4px;
 }
 
-:where(#fkfavmkebc) .gt_column_spanner_outer:first-child {
+:where(#uwuzjrsjgm) .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-:where(#fkfavmkebc) .gt_column_spanner_outer:last-child {
+:where(#uwuzjrsjgm) .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-:where(#fkfavmkebc) .gt_column_spanner {
+:where(#uwuzjrsjgm) .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -614,7 +639,7 @@
   width: 100%;
 }
 
-:where(#fkfavmkebc) .gt_group_heading {
+:where(#uwuzjrsjgm) .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -636,7 +661,7 @@
   vertical-align: middle;
 }
 
-:where(#fkfavmkebc) .gt_empty_group_heading {
+:where(#uwuzjrsjgm) .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -651,15 +676,15 @@
   vertical-align: middle;
 }
 
-:where(#fkfavmkebc) .gt_from_md > :first-child {
+:where(#uwuzjrsjgm) .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-:where(#fkfavmkebc) .gt_from_md > :last-child {
+:where(#uwuzjrsjgm) .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-:where(#fkfavmkebc) .gt_row {
+:where(#uwuzjrsjgm) .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -678,7 +703,7 @@
   overflow-x: hidden;
 }
 
-:where(#fkfavmkebc) .gt_stub {
+:where(#uwuzjrsjgm) .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -690,7 +715,7 @@
   padding-left: 12px;
 }
 
-:where(#fkfavmkebc) .gt_summary_row {
+:where(#uwuzjrsjgm) .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -700,7 +725,7 @@
   padding-right: 5px;
 }
 
-:where(#fkfavmkebc) .gt_first_summary_row {
+:where(#uwuzjrsjgm) .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -710,7 +735,7 @@
   border-top-color: #D3D3D3;
 }
 
-:where(#fkfavmkebc) .gt_grand_summary_row {
+:where(#uwuzjrsjgm) .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -720,7 +745,7 @@
   padding-right: 5px;
 }
 
-:where(#fkfavmkebc) .gt_first_grand_summary_row {
+:where(#uwuzjrsjgm) .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -730,11 +755,11 @@
   border-top-color: #D3D3D3;
 }
 
-:where(#fkfavmkebc) .gt_striped {
+:where(#uwuzjrsjgm) .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-:where(#fkfavmkebc) .gt_table_body {
+:where(#uwuzjrsjgm) .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -743,7 +768,7 @@
   border-bottom-color: #D3D3D3;
 }
 
-:where(#fkfavmkebc) .gt_footnotes {
+:where(#uwuzjrsjgm) .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: solid;
@@ -757,13 +782,13 @@
   border-right-color: #D3D3D3;
 }
 
-:where(#fkfavmkebc) .gt_footnote {
+:where(#uwuzjrsjgm) .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-:where(#fkfavmkebc) .gt_sourcenotes {
+:where(#uwuzjrsjgm) .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: solid;
@@ -777,41 +802,41 @@
   border-right-color: #D3D3D3;
 }
 
-:where(#fkfavmkebc) .gt_sourcenote {
+:where(#uwuzjrsjgm) .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-:where(#fkfavmkebc) .gt_left {
+:where(#uwuzjrsjgm) .gt_left {
   text-align: left;
 }
 
-:where(#fkfavmkebc) .gt_center {
+:where(#uwuzjrsjgm) .gt_center {
   text-align: center;
 }
 
-:where(#fkfavmkebc) .gt_right {
+:where(#uwuzjrsjgm) .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-:where(#fkfavmkebc) .gt_font_normal {
+:where(#uwuzjrsjgm) .gt_font_normal {
   font-weight: normal;
 }
 
-:where(#fkfavmkebc) .gt_font_bold {
+:where(#uwuzjrsjgm) .gt_font_bold {
   font-weight: bold;
 }
 
-:where(#fkfavmkebc) .gt_font_italic {
+:where(#uwuzjrsjgm) .gt_font_italic {
   font-style: italic;
 }
 
-:where(#fkfavmkebc) .gt_super {
+:where(#uwuzjrsjgm) .gt_super {
   font-size: 65%;
 }
 
-:where(#fkfavmkebc) .gt_footnote_marks {
+:where(#uwuzjrsjgm) .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 65%;
@@ -863,18 +888,21 @@
 </section>
 <section id="datos-ordenados-1" class="slide level2">
 <h2>Datos ordenados</h2>
+<div class="small-4">
 <p>En la realidad, los conjuntos de datos vienen en muchas formas diferentes:</p>
+</div>
+<p><br></p>
 <p><strong><em>Forma 2</em></strong></p>
 <div class="small-2">
 <div class="cell">
 <div class="cell-output-display">
 
-<div id="bhkrxgaqfs" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="jbufdlcnyk" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-:where(#bhkrxgaqfs) .gt_table {
+:where(#jbufdlcnyk) .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -899,7 +927,7 @@
   border-left-color: #D3D3D3;
 }
 
-:where(#bhkrxgaqfs) .gt_heading {
+:where(#jbufdlcnyk) .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -911,7 +939,7 @@
   border-right-color: #D3D3D3;
 }
 
-:where(#bhkrxgaqfs) .gt_title {
+:where(#jbufdlcnyk) .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -921,7 +949,7 @@
   border-bottom-width: 0;
 }
 
-:where(#bhkrxgaqfs) .gt_subtitle {
+:where(#jbufdlcnyk) .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -931,13 +959,13 @@
   border-top-width: 0;
 }
 
-:where(#bhkrxgaqfs) .gt_bottom_border {
+:where(#jbufdlcnyk) .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-:where(#bhkrxgaqfs) .gt_col_headings {
+:where(#jbufdlcnyk) .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -952,7 +980,7 @@
   border-right-color: #D3D3D3;
 }
 
-:where(#bhkrxgaqfs) .gt_col_heading {
+:where(#jbufdlcnyk) .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -972,7 +1000,7 @@
   overflow-x: hidden;
 }
 
-:where(#bhkrxgaqfs) .gt_column_spanner_outer {
+:where(#jbufdlcnyk) .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -984,15 +1012,15 @@
   padding-right: 4px;
 }
 
-:where(#bhkrxgaqfs) .gt_column_spanner_outer:first-child {
+:where(#jbufdlcnyk) .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-:where(#bhkrxgaqfs) .gt_column_spanner_outer:last-child {
+:where(#jbufdlcnyk) .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-:where(#bhkrxgaqfs) .gt_column_spanner {
+:where(#jbufdlcnyk) .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1004,7 +1032,7 @@
   width: 100%;
 }
 
-:where(#bhkrxgaqfs) .gt_group_heading {
+:where(#jbufdlcnyk) .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1026,7 +1054,7 @@
   vertical-align: middle;
 }
 
-:where(#bhkrxgaqfs) .gt_empty_group_heading {
+:where(#jbufdlcnyk) .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1041,15 +1069,15 @@
   vertical-align: middle;
 }
 
-:where(#bhkrxgaqfs) .gt_from_md > :first-child {
+:where(#jbufdlcnyk) .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-:where(#bhkrxgaqfs) .gt_from_md > :last-child {
+:where(#jbufdlcnyk) .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-:where(#bhkrxgaqfs) .gt_row {
+:where(#jbufdlcnyk) .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1068,7 +1096,7 @@
   overflow-x: hidden;
 }
 
-:where(#bhkrxgaqfs) .gt_stub {
+:where(#jbufdlcnyk) .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1080,7 +1108,7 @@
   padding-left: 12px;
 }
 
-:where(#bhkrxgaqfs) .gt_summary_row {
+:where(#jbufdlcnyk) .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1090,7 +1118,7 @@
   padding-right: 5px;
 }
 
-:where(#bhkrxgaqfs) .gt_first_summary_row {
+:where(#jbufdlcnyk) .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1100,7 +1128,7 @@
   border-top-color: #D3D3D3;
 }
 
-:where(#bhkrxgaqfs) .gt_grand_summary_row {
+:where(#jbufdlcnyk) .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1110,7 +1138,7 @@
   padding-right: 5px;
 }
 
-:where(#bhkrxgaqfs) .gt_first_grand_summary_row {
+:where(#jbufdlcnyk) .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1120,11 +1148,11 @@
   border-top-color: #D3D3D3;
 }
 
-:where(#bhkrxgaqfs) .gt_striped {
+:where(#jbufdlcnyk) .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-:where(#bhkrxgaqfs) .gt_table_body {
+:where(#jbufdlcnyk) .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1133,7 +1161,7 @@
   border-bottom-color: #D3D3D3;
 }
 
-:where(#bhkrxgaqfs) .gt_footnotes {
+:where(#jbufdlcnyk) .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: solid;
@@ -1147,13 +1175,13 @@
   border-right-color: #D3D3D3;
 }
 
-:where(#bhkrxgaqfs) .gt_footnote {
+:where(#jbufdlcnyk) .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-:where(#bhkrxgaqfs) .gt_sourcenotes {
+:where(#jbufdlcnyk) .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: solid;
@@ -1167,41 +1195,41 @@
   border-right-color: #D3D3D3;
 }
 
-:where(#bhkrxgaqfs) .gt_sourcenote {
+:where(#jbufdlcnyk) .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-:where(#bhkrxgaqfs) .gt_left {
+:where(#jbufdlcnyk) .gt_left {
   text-align: left;
 }
 
-:where(#bhkrxgaqfs) .gt_center {
+:where(#jbufdlcnyk) .gt_center {
   text-align: center;
 }
 
-:where(#bhkrxgaqfs) .gt_right {
+:where(#jbufdlcnyk) .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-:where(#bhkrxgaqfs) .gt_font_normal {
+:where(#jbufdlcnyk) .gt_font_normal {
   font-weight: normal;
 }
 
-:where(#bhkrxgaqfs) .gt_font_bold {
+:where(#jbufdlcnyk) .gt_font_bold {
   font-weight: bold;
 }
 
-:where(#bhkrxgaqfs) .gt_font_italic {
+:where(#jbufdlcnyk) .gt_font_italic {
   font-style: italic;
 }
 
-:where(#bhkrxgaqfs) .gt_super {
+:where(#jbufdlcnyk) .gt_super {
   font-size: 65%;
 }
 
-:where(#bhkrxgaqfs) .gt_footnote_marks {
+:where(#jbufdlcnyk) .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 65%;
@@ -1277,18 +1305,21 @@
 </section>
 <section id="datos-ordenados-2" class="slide level2">
 <h2>Datos ordenados</h2>
+<div class="small-4">
 <p>En la realidad, los conjuntos de datos vienen en muchas formas diferentes:</p>
+</div>
+<p><br></p>
 <p><strong><em>Forma 3</em></strong></p>
 <div class="small-1">
 <div class="cell">
 <div class="cell-output-display">
 
-<div id="ecfpgyvlrv" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="lvwroerwnx" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-:where(#ecfpgyvlrv) .gt_table {
+:where(#lvwroerwnx) .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -1313,7 +1344,7 @@
   border-left-color: #D3D3D3;
 }
 
-:where(#ecfpgyvlrv) .gt_heading {
+:where(#lvwroerwnx) .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1325,7 +1356,7 @@
   border-right-color: #D3D3D3;
 }
 
-:where(#ecfpgyvlrv) .gt_title {
+:where(#lvwroerwnx) .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1335,7 +1366,7 @@
   border-bottom-width: 0;
 }
 
-:where(#ecfpgyvlrv) .gt_subtitle {
+:where(#lvwroerwnx) .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1345,13 +1376,13 @@
   border-top-width: 0;
 }
 
-:where(#ecfpgyvlrv) .gt_bottom_border {
+:where(#lvwroerwnx) .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-:where(#ecfpgyvlrv) .gt_col_headings {
+:where(#lvwroerwnx) .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1366,7 +1397,7 @@
   border-right-color: #D3D3D3;
 }
 
-:where(#ecfpgyvlrv) .gt_col_heading {
+:where(#lvwroerwnx) .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1386,7 +1417,7 @@
   overflow-x: hidden;
 }
 
-:where(#ecfpgyvlrv) .gt_column_spanner_outer {
+:where(#lvwroerwnx) .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1398,15 +1429,15 @@
   padding-right: 4px;
 }
 
-:where(#ecfpgyvlrv) .gt_column_spanner_outer:first-child {
+:where(#lvwroerwnx) .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-:where(#ecfpgyvlrv) .gt_column_spanner_outer:last-child {
+:where(#lvwroerwnx) .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-:where(#ecfpgyvlrv) .gt_column_spanner {
+:where(#lvwroerwnx) .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1418,7 +1449,7 @@
   width: 100%;
 }
 
-:where(#ecfpgyvlrv) .gt_group_heading {
+:where(#lvwroerwnx) .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1440,7 +1471,7 @@
   vertical-align: middle;
 }
 
-:where(#ecfpgyvlrv) .gt_empty_group_heading {
+:where(#lvwroerwnx) .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1455,15 +1486,15 @@
   vertical-align: middle;
 }
 
-:where(#ecfpgyvlrv) .gt_from_md > :first-child {
+:where(#lvwroerwnx) .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-:where(#ecfpgyvlrv) .gt_from_md > :last-child {
+:where(#lvwroerwnx) .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-:where(#ecfpgyvlrv) .gt_row {
+:where(#lvwroerwnx) .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1482,7 +1513,7 @@
   overflow-x: hidden;
 }
 
-:where(#ecfpgyvlrv) .gt_stub {
+:where(#lvwroerwnx) .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1494,7 +1525,7 @@
   padding-left: 12px;
 }
 
-:where(#ecfpgyvlrv) .gt_summary_row {
+:where(#lvwroerwnx) .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1504,7 +1535,7 @@
   padding-right: 5px;
 }
 
-:where(#ecfpgyvlrv) .gt_first_summary_row {
+:where(#lvwroerwnx) .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1514,7 +1545,7 @@
   border-top-color: #D3D3D3;
 }
 
-:where(#ecfpgyvlrv) .gt_grand_summary_row {
+:where(#lvwroerwnx) .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1524,7 +1555,7 @@
   padding-right: 5px;
 }
 
-:where(#ecfpgyvlrv) .gt_first_grand_summary_row {
+:where(#lvwroerwnx) .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1534,11 +1565,11 @@
   border-top-color: #D3D3D3;
 }
 
-:where(#ecfpgyvlrv) .gt_striped {
+:where(#lvwroerwnx) .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-:where(#ecfpgyvlrv) .gt_table_body {
+:where(#lvwroerwnx) .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1547,7 +1578,7 @@
   border-bottom-color: #D3D3D3;
 }
 
-:where(#ecfpgyvlrv) .gt_footnotes {
+:where(#lvwroerwnx) .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: solid;
@@ -1561,13 +1592,13 @@
   border-right-color: #D3D3D3;
 }
 
-:where(#ecfpgyvlrv) .gt_footnote {
+:where(#lvwroerwnx) .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-:where(#ecfpgyvlrv) .gt_sourcenotes {
+:where(#lvwroerwnx) .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: solid;
@@ -1581,41 +1612,41 @@
   border-right-color: #D3D3D3;
 }
 
-:where(#ecfpgyvlrv) .gt_sourcenote {
+:where(#lvwroerwnx) .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-:where(#ecfpgyvlrv) .gt_left {
+:where(#lvwroerwnx) .gt_left {
   text-align: left;
 }
 
-:where(#ecfpgyvlrv) .gt_center {
+:where(#lvwroerwnx) .gt_center {
   text-align: center;
 }
 
-:where(#ecfpgyvlrv) .gt_right {
+:where(#lvwroerwnx) .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-:where(#ecfpgyvlrv) .gt_font_normal {
+:where(#lvwroerwnx) .gt_font_normal {
   font-weight: normal;
 }
 
-:where(#ecfpgyvlrv) .gt_font_bold {
+:where(#lvwroerwnx) .gt_font_bold {
   font-weight: bold;
 }
 
-:where(#ecfpgyvlrv) .gt_font_italic {
+:where(#lvwroerwnx) .gt_font_italic {
   font-style: italic;
 }
 
-:where(#ecfpgyvlrv) .gt_super {
+:where(#lvwroerwnx) .gt_super {
   font-size: 65%;
 }
 
-:where(#ecfpgyvlrv) .gt_footnote_marks {
+:where(#lvwroerwnx) .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 65%;
@@ -1660,7 +1691,10 @@
 </section>
 <section id="datos-ordenados-3" class="slide level2">
 <h2>Datos ordenados</h2>
+<div class="small-4">
 <p>En la realidad, los conjuntos de datos vienen en muchas formas diferentes:</p>
+</div>
+<p><br></p>
 <p><strong><em>Forma 4</em></strong></p>
 <div class="columns">
 <div class="column" style="text-align: justify;">
@@ -1668,12 +1702,12 @@
 <div class="cell">
 <div class="cell-output-display">
 
-<div id="oqscxixeds" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="chtumzuxtf" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-:where(#oqscxixeds) .gt_table {
+:where(#chtumzuxtf) .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -1698,7 +1732,7 @@
   border-left-color: #D3D3D3;
 }
 
-:where(#oqscxixeds) .gt_heading {
+:where(#chtumzuxtf) .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1710,7 +1744,7 @@
   border-right-color: #D3D3D3;
 }
 
-:where(#oqscxixeds) .gt_title {
+:where(#chtumzuxtf) .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1720,7 +1754,7 @@
   border-bottom-width: 0;
 }
 
-:where(#oqscxixeds) .gt_subtitle {
+:where(#chtumzuxtf) .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1730,13 +1764,13 @@
   border-top-width: 0;
 }
 
-:where(#oqscxixeds) .gt_bottom_border {
+:where(#chtumzuxtf) .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-:where(#oqscxixeds) .gt_col_headings {
+:where(#chtumzuxtf) .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1751,7 +1785,7 @@
   border-right-color: #D3D3D3;
 }
 
-:where(#oqscxixeds) .gt_col_heading {
+:where(#chtumzuxtf) .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1771,7 +1805,7 @@
   overflow-x: hidden;
 }
 
-:where(#oqscxixeds) .gt_column_spanner_outer {
+:where(#chtumzuxtf) .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1783,15 +1817,15 @@
   padding-right: 4px;
 }
 
-:where(#oqscxixeds) .gt_column_spanner_outer:first-child {
+:where(#chtumzuxtf) .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-:where(#oqscxixeds) .gt_column_spanner_outer:last-child {
+:where(#chtumzuxtf) .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-:where(#oqscxixeds) .gt_column_spanner {
+:where(#chtumzuxtf) .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1803,7 +1837,7 @@
   width: 100%;
 }
 
-:where(#oqscxixeds) .gt_group_heading {
+:where(#chtumzuxtf) .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1825,7 +1859,7 @@
   vertical-align: middle;
 }
 
-:where(#oqscxixeds) .gt_empty_group_heading {
+:where(#chtumzuxtf) .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1840,15 +1874,15 @@
   vertical-align: middle;
 }
 
-:where(#oqscxixeds) .gt_from_md > :first-child {
+:where(#chtumzuxtf) .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-:where(#oqscxixeds) .gt_from_md > :last-child {
+:where(#chtumzuxtf) .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-:where(#oqscxixeds) .gt_row {
+:where(#chtumzuxtf) .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1867,7 +1901,7 @@
   overflow-x: hidden;
 }
 
-:where(#oqscxixeds) .gt_stub {
+:where(#chtumzuxtf) .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1879,7 +1913,7 @@
   padding-left: 12px;
 }
 
-:where(#oqscxixeds) .gt_summary_row {
+:where(#chtumzuxtf) .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1889,7 +1923,7 @@
   padding-right: 5px;
 }
 
-:where(#oqscxixeds) .gt_first_summary_row {
+:where(#chtumzuxtf) .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1899,7 +1933,7 @@
   border-top-color: #D3D3D3;
 }
 
-:where(#oqscxixeds) .gt_grand_summary_row {
+:where(#chtumzuxtf) .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1909,7 +1943,7 @@
   padding-right: 5px;
 }
 
-:where(#oqscxixeds) .gt_first_grand_summary_row {
+:where(#chtumzuxtf) .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1919,11 +1953,11 @@
   border-top-color: #D3D3D3;
 }
 
-:where(#oqscxixeds) .gt_striped {
+:where(#chtumzuxtf) .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-:where(#oqscxixeds) .gt_table_body {
+:where(#chtumzuxtf) .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1932,7 +1966,7 @@
   border-bottom-color: #D3D3D3;
 }
 
-:where(#oqscxixeds) .gt_footnotes {
+:where(#chtumzuxtf) .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: solid;
@@ -1946,13 +1980,13 @@
   border-right-color: #D3D3D3;
 }
 
-:where(#oqscxixeds) .gt_footnote {
+:where(#chtumzuxtf) .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-:where(#oqscxixeds) .gt_sourcenotes {
+:where(#chtumzuxtf) .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: solid;
@@ -1966,41 +2000,41 @@
   border-right-color: #D3D3D3;
 }
 
-:where(#oqscxixeds) .gt_sourcenote {
+:where(#chtumzuxtf) .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-:where(#oqscxixeds) .gt_left {
+:where(#chtumzuxtf) .gt_left {
   text-align: left;
 }
 
-:where(#oqscxixeds) .gt_center {
+:where(#chtumzuxtf) .gt_center {
   text-align: center;
 }
 
-:where(#oqscxixeds) .gt_right {
+:where(#chtumzuxtf) .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-:where(#oqscxixeds) .gt_font_normal {
+:where(#chtumzuxtf) .gt_font_normal {
   font-weight: normal;
 }
 
-:where(#oqscxixeds) .gt_font_bold {
+:where(#chtumzuxtf) .gt_font_bold {
   font-weight: bold;
 }
 
-:where(#oqscxixeds) .gt_font_italic {
+:where(#chtumzuxtf) .gt_font_italic {
   font-style: italic;
 }
 
-:where(#oqscxixeds) .gt_super {
+:where(#chtumzuxtf) .gt_super {
   font-size: 65%;
 }
 
-:where(#oqscxixeds) .gt_footnote_marks {
+:where(#chtumzuxtf) .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 65%;
@@ -2038,12 +2072,12 @@
 <div class="cell">
 <div class="cell-output-display">
 
-<div id="fqoqkckjvb" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="zpecduubcq" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-:where(#fqoqkckjvb) .gt_table {
+:where(#zpecduubcq) .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -2068,7 +2102,7 @@
   border-left-color: #D3D3D3;
 }
 
-:where(#fqoqkckjvb) .gt_heading {
+:where(#zpecduubcq) .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -2080,7 +2114,7 @@
   border-right-color: #D3D3D3;
 }
 
-:where(#fqoqkckjvb) .gt_title {
+:where(#zpecduubcq) .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -2090,7 +2124,7 @@
   border-bottom-width: 0;
 }
 
-:where(#fqoqkckjvb) .gt_subtitle {
+:where(#zpecduubcq) .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -2100,13 +2134,13 @@
   border-top-width: 0;
 }
 
-:where(#fqoqkckjvb) .gt_bottom_border {
+:where(#zpecduubcq) .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-:where(#fqoqkckjvb) .gt_col_headings {
+:where(#zpecduubcq) .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2121,7 +2155,7 @@
   border-right-color: #D3D3D3;
 }
 
-:where(#fqoqkckjvb) .gt_col_heading {
+:where(#zpecduubcq) .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2141,7 +2175,7 @@
   overflow-x: hidden;
 }
 
-:where(#fqoqkckjvb) .gt_column_spanner_outer {
+:where(#zpecduubcq) .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2153,15 +2187,15 @@
   padding-right: 4px;
 }
 
-:where(#fqoqkckjvb) .gt_column_spanner_outer:first-child {
+:where(#zpecduubcq) .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-:where(#fqoqkckjvb) .gt_column_spanner_outer:last-child {
+:where(#zpecduubcq) .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-:where(#fqoqkckjvb) .gt_column_spanner {
+:where(#zpecduubcq) .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -2173,7 +2207,7 @@
   width: 100%;
 }
 
-:where(#fqoqkckjvb) .gt_group_heading {
+:where(#zpecduubcq) .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -2195,7 +2229,7 @@
   vertical-align: middle;
 }
 
-:where(#fqoqkckjvb) .gt_empty_group_heading {
+:where(#zpecduubcq) .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -2210,15 +2244,15 @@
   vertical-align: middle;
 }
 
-:where(#fqoqkckjvb) .gt_from_md > :first-child {
+:where(#zpecduubcq) .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-:where(#fqoqkckjvb) .gt_from_md > :last-child {
+:where(#zpecduubcq) .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-:where(#fqoqkckjvb) .gt_row {
+:where(#zpecduubcq) .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2237,7 +2271,7 @@
   overflow-x: hidden;
 }
 
-:where(#fqoqkckjvb) .gt_stub {
+:where(#zpecduubcq) .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2249,7 +2283,7 @@
   padding-left: 12px;
 }
 
-:where(#fqoqkckjvb) .gt_summary_row {
+:where(#zpecduubcq) .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2259,7 +2293,7 @@
   padding-right: 5px;
 }
 
-:where(#fqoqkckjvb) .gt_first_summary_row {
+:where(#zpecduubcq) .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2269,7 +2303,7 @@
   border-top-color: #D3D3D3;
 }
 
-:where(#fqoqkckjvb) .gt_grand_summary_row {
+:where(#zpecduubcq) .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2279,7 +2313,7 @@
   padding-right: 5px;
 }
 
-:where(#fqoqkckjvb) .gt_first_grand_summary_row {
+:where(#zpecduubcq) .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2289,11 +2323,11 @@
   border-top-color: #D3D3D3;
 }
 
-:where(#fqoqkckjvb) .gt_striped {
+:where(#zpecduubcq) .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-:where(#fqoqkckjvb) .gt_table_body {
+:where(#zpecduubcq) .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2302,7 +2336,7 @@
   border-bottom-color: #D3D3D3;
 }
 
-:where(#fqoqkckjvb) .gt_footnotes {
+:where(#zpecduubcq) .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: solid;
@@ -2316,13 +2350,13 @@
   border-right-color: #D3D3D3;
 }
 
-:where(#fqoqkckjvb) .gt_footnote {
+:where(#zpecduubcq) .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-:where(#fqoqkckjvb) .gt_sourcenotes {
+:where(#zpecduubcq) .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: solid;
@@ -2336,41 +2370,41 @@
   border-right-color: #D3D3D3;
 }
 
-:where(#fqoqkckjvb) .gt_sourcenote {
+:where(#zpecduubcq) .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-:where(#fqoqkckjvb) .gt_left {
+:where(#zpecduubcq) .gt_left {
   text-align: left;
 }
 
-:where(#fqoqkckjvb) .gt_center {
+:where(#zpecduubcq) .gt_center {
   text-align: center;
 }
 
-:where(#fqoqkckjvb) .gt_right {
+:where(#zpecduubcq) .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-:where(#fqoqkckjvb) .gt_font_normal {
+:where(#zpecduubcq) .gt_font_normal {
   font-weight: normal;
 }
 
-:where(#fqoqkckjvb) .gt_font_bold {
+:where(#zpecduubcq) .gt_font_bold {
   font-weight: bold;
 }
 
-:where(#fqoqkckjvb) .gt_font_italic {
+:where(#zpecduubcq) .gt_font_italic {
   font-style: italic;
 }
 
-:where(#fqoqkckjvb) .gt_super {
+:where(#zpecduubcq) .gt_super {
   font-size: 65%;
 }
 
-:where(#fqoqkckjvb) .gt_footnote_marks {
+:where(#zpecduubcq) .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 65%;
@@ -2408,34 +2442,160 @@
 </section>
 <section id="datos-ordenados-4" class="slide level2">
 <h2>Datos ordenados</h2>
+<div class="small-4">
 <p>Los conjuntos de datos anteriores muestran los mismos datos organizados en cuatro formas diferentes. Sin embargo solo uno de ellos, el que es considerado como un <strong>dato ordenado</strong>, será más fácil para trabajar en <span style="color: orange">R</span>.</p>
+</div>
+<div class="small-4">
 <p>Para que un conjunto de datos sea considerado como dato ordenado, debe cumplir tres reglas:</p>
+</div>
+<div class="small-4">
 <ul>
 <li>Cada variable debe colocarse en una columna:</li>
 </ul>
+</div>
 
-<img data-src="index_files/figure-revealjs/unnamed-chunk-13-1.png" style="width:54.0%" class="r-stretch quarto-figure-center"></section>
+<img data-src="index_files/figure-revealjs/unnamed-chunk-13-1.png" style="width:34.0%" class="r-stretch quarto-figure-center"></section>
 <section id="datos-ordenados-5" class="slide level2">
 <h2>Datos ordenados</h2>
+<div class="small-4">
 <p>Los conjuntos de datos anteriores muestran los mismos datos organizados en cuatro formas diferentes. Sin embargo solo uno de ellos, el que es considerado como un <strong>dato ordenado</strong>, será más fácil para trabajar en <span style="color: orange">R</span>.</p>
+</div>
+<div class="small-4">
 <p>Para que un conjunto de datos sea considerado como dato ordenado, debe cumplir tres reglas:</p>
+</div>
+<div class="small-4">
 <ul>
 <li>Cada observación debe colocarse en una fila:</li>
 </ul>
+</div>
 
-<img data-src="index_files/figure-revealjs/unnamed-chunk-14-1.png" style="width:54.0%" class="r-stretch quarto-figure-center"></section>
+<img data-src="index_files/figure-revealjs/unnamed-chunk-14-1.png" style="width:34.0%" class="r-stretch quarto-figure-center"></section>
 <section id="datos-ordenados-6" class="slide level2">
 <h2>Datos ordenados</h2>
+<div class="small-4">
 <p>Los conjuntos de datos anteriores muestran los mismos datos organizados en cuatro formas diferentes. Sin embargo solo uno de ellos, el que es considerado como un <strong>dato ordenado</strong>, será más fácil para trabajar en <span style="color: orange">R</span>.</p>
+</div>
+<div class="small-4">
 <p>Para que un conjunto de datos sea considerado como dato ordenado, debe cumplir tres reglas:</p>
+</div>
+<div class="small-4">
 <ul>
 <li>Cada valor debe colocarse en una celda:</li>
 </ul>
+</div>
 
-<img data-src="index_files/figure-revealjs/unnamed-chunk-15-1.png" style="width:54.0%" class="r-stretch quarto-figure-center"></section>
+<img data-src="index_files/figure-revealjs/unnamed-chunk-15-1.png" style="width:34.0%" class="r-stretch quarto-figure-center"></section>
 <section id="ordenando-los-datos-con-el-paquete-tidyr" class="slide level2">
 <h2>Ordenando los datos con el paquete <span style="color: orange">tidyr</span></h2>
+<div class="small-4">
 <p>El paquete <span style="color: orange">tidyr</span> tiene como objetivo ayudar a ordenar los datos desordenados. Para esto, este paquete contiene varias funciones:</p>
+</div>
+<h3 id="pivot_wider"><span style="color: orange">pivot_wider()</span></h3>
+<div class="small-4">
+<p>La función <span style="color: orange">pivot_wider()</span> es usada cuando se tiene una variable dispersa en múltiples filas.</p>
+</div>
+
+<img data-src="index_files/figure-revealjs/unnamed-chunk-16-1.png" style="width:34.0%" class="r-stretch quarto-figure-center"><div class="small-4">
+<p>La estructura de esta función es:</p>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+
+</div>
+</div>
+<div class="small-4">
+<p><span style="color: cornflowerblue">data</span> = nombre del conjunto de datos a ordenar.<br></p>
+</div>
+<div class="small-4">
+<p><span style="color: red">names_from</span> = nombre de la columna que contiene más de una variable.<br></p>
+</div>
+<div class="small-4">
+<p><span style="color: orange">values_from</span> = nombre de la columna que contiene los valores de las variables.</p>
+</div>
+</section>
+<section id="ordenando-los-datos-con-el-paquete-tidyr-1" class="slide level2">
+<h2>Ordenando los datos con el paquete <span style="color: orange">tidyr</span></h2>
+<div class="small-4">
+<p>El paquete <span style="color: orange">tidyr</span> tiene como objetivo ayudar a ordenar los datos desordenados. Para esto, este paquete contiene varias funciones:</p>
+</div>
+<h3 id="pivot_longer"><span style="color: orange">pivot_longer()</span></h3>
+<div class="small-4">
+<p>La función <span style="color: orange">pivot_longer()</span> arregla situaciones en donde las columnas no representan variables, sino valores de una misma variable.</p>
+</div>
+
+<img data-src="index_files/figure-revealjs/unnamed-chunk-18-1.png" style="width:34.0%" class="r-stretch quarto-figure-center"><div class="small-4">
+<p>La estructura de esta función es:</p>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+
+</div>
+</div>
+<div class="small-4">
+<p><span style="color: cornflowerblue">data</span> = nombre del conjunto de datos a ordenar.<br></p>
+</div>
+<div class="small-4">
+<p><span style="color: red">cols</span> = nombre de las columnas que pueden ser una sola variable.<br></p>
+</div>
+<div class="small-4">
+<p><span style="color: orange">names_to</span> = nombre de la columna a crear a partir de los datos almacenados como columnas.<br></p>
+</div>
+<div class="small-4">
+<p><span style="color: green">values_to</span> = nombre de la columna a crear a partir de los datos almacenados como valores.</p>
+</div>
+</section>
+<section id="ordenando-los-datos-con-el-paquete-tidyr-2" class="slide level2">
+<h2>Ordenando los datos con el paquete <span style="color: orange">tidyr</span></h2>
+<div class="small-4">
+<p>El paquete <span style="color: orange">tidyr</span> tiene como objetivo ayudar a ordenar los datos desordenados. Para esto, este paquete contiene varias funciones:</p>
+</div>
+<h3 id="separate-y-unite"><span style="color: orange">separate()</span> y <span style="color: orange">unite()</span></h3>
+<div class="small-4">
+<p>La función <span style="color: orange">separate()</span> permite dividir una columna en múltiples columnas, tomando como separador algún símbolo, mientras que la función <span style="color: orange">unite()</span> permite tomar múltiples columnas y las une en una única columna, separando los elementos mediante un separador.</p>
+</div>
+<div class="small-4">
+<p>La estructura de estas funciones son:</p>
+</div>
+<div class="columns">
+<div class="column" style="text-align: center;">
+<div class="cell">
+<div class="cell-output-display">
+
+</div>
+</div>
+<div class="small-4">
+<p><span style="color: cornflowerblue">data</span> = nombre del conjunto de datos a ordenar.<br></p>
+</div>
+<div class="small-4">
+<p><span style="color: red">col</span> = nombre de la columna que se quiere dividir.<br></p>
+</div>
+<div class="small-4">
+<p><span style="color: orange">into</span> = nombres de las nuevas columnas.<br></p>
+</div>
+<div class="small-4">
+<p><span style="color: green">sep</span> = símbolo con el que se dividio el valor de la variable en una misma columna.</p>
+</div>
+</div><div class="column" style="text-align: center;">
+<div class="cell">
+<div class="cell-output-display">
+
+</div>
+</div>
+<div class="small-4">
+<p><span style="color: cornflowerblue">data</span> = nombre del conjunto de datos a ordenar.<br></p>
+</div>
+<div class="small-4">
+<p><span style="color: red">col</span> = nombre de la nueva columna que se quiere crear.<br></p>
+</div>
+<div class="small-4">
+<p><span style="color: orange">sep</span> = símbolo con el que se va a separar los valores de la variable en una misma columna.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="tu-turno" class="slide level2">
+<h2>Tu turno!!</h2>
+<h3 id="click-aquí-por-favor.">Click <a href="https://jorge-leonardo-lopez-martinez.shinyapps.io/Practica_clase_3a/">aquí</a> por favor.</h3>
 <div class="footer footer-default">
 <p><a href="https://leo4luffy.github.io/R_amigable.github.io/index.html">R amigable</a></p>
 </div>

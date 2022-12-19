@@ -9,7 +9,7 @@ format:
 execute:
   echo: false
   #fig-width: 6
-  #fig-height: 6
+  #fig-height: 4
 lang: es
 ---
 
@@ -40,18 +40,24 @@ Estudiante de doctorado
 pacman::p_load(knitr, tidyverse, DSR, gt, flair)
 ```
 
+:::small-4
 - Hablaremos sobre que consiste los datos ordenados y algunos paquetes del tidyverse.
+:::
 
+:::small-4
 - Aprenderemos sobre como pasar de datos desordenados a ordenados mediante el uso del paquete <span style="color: orange">tidyr</span>.
+:::
 
 ## Ciencia de datos
 
+:::small-4
 El termino científico de datos abarca a todas las personas que en forma cotidiana aplican técnicas de programación para el análisis de datos. Los científicos de datos combinan una variedad de habilidades, entre ellas:
+:::
 
 ```{r}
 #| eval: true
 #| echo: false
-#| out-width: '54%'
+#| out-width: '34%'
 #| fig-align: 'center'
 
 include_graphics('img/Ciencia_datos.png')
@@ -59,22 +65,28 @@ include_graphics('img/Ciencia_datos.png')
 
 ## Ciencia de datos
 
+:::small-4
 El proceso de análisis de datos es:
+:::
 
 ```{r}
 #| eval: true
 #| echo: false
-#| out-width: '54%'
+#| out-width: '34%'
 #| fig-align: 'center'
 
 include_graphics('img/EDA.png')
 ```
 
+:::small-4
 Todo el proceso anterior, el cientifico de datos lo lleva a cabo mediante la programación.
+:::
 
 ## El tidyverse
 
+:::small-4
 El tidyverse consiste de una colección de paquetes del R que trabajan en armonía con el objetivo de cubrir todo el espectro del análisis de datos dentro del R. Algunos de estos paquetes son:
+:::
 
 ::: columns
 
@@ -83,7 +95,7 @@ El tidyverse consiste de una colección de paquetes del R que trabajan en armon�
 ```{r}
 #| eval: true
 #| echo: false
-#| out-width: '54%'
+#| out-width: '34%'
 #| fig-align: 'center'
 
 include_graphics('img/tidyr.png')
@@ -96,7 +108,7 @@ include_graphics('img/tidyr.png')
 ```{r}
 #| eval: true
 #| echo: false
-#| out-width: '54%'
+#| out-width: '34%'
 #| fig-align: 'center'
 
 include_graphics('img/dplyr.png')
@@ -108,13 +120,19 @@ include_graphics('img/dplyr.png')
 
 ## El tidyverse
 
+:::small-4
 Existen dos formas de usar los paquetes del tidyverse:
+:::
 
 ::: columns
 
 ::: {.column width="50%" style="text-align: justify;"}
 
+:::small-4
 De manera individual, instalando cada paquete por medio de la función <span style="color: orange">install.packages()</span>, y cargandolos con la función <span style="color: orange">library()</span>.
+:::
+
+<br>
 
 ```{r}
 #| eval: false
@@ -130,7 +148,11 @@ library(dplyr)
 
 ::: {.column width="50%" style="text-align: justify;"}
 
+:::small-4
 De manera conjunta, instalando todos los paquetes del <span style="color: orange">tidyverse</span>.
+:::
+
+<br>
 
 ```{r}
 #| eval: false
@@ -146,9 +168,13 @@ library(tidyverse)
 
 ## Datos ordenados
 
+:::small-4
 En la realidad, los conjuntos de datos vienen en muchas formas diferentes:
+:::
 
-___Forma 1___
+<br>
+
+___Forma 1___ 
 
 :::small-1
 
@@ -173,7 +199,11 @@ tribble(
 
 ## Datos ordenados
 
+:::small-4
 En la realidad, los conjuntos de datos vienen en muchas formas diferentes:
+:::
+
+<br>
 
 ___Forma 2___
 
@@ -206,7 +236,11 @@ tribble(
 
 ## Datos ordenados
 
+:::small-4
 En la realidad, los conjuntos de datos vienen en muchas formas diferentes:
+:::
+
+<br>
 
 ___Forma 3___
 
@@ -233,7 +267,11 @@ tribble(
 
 ## Datos ordenados
 
+:::small-4
 En la realidad, los conjuntos de datos vienen en muchas formas diferentes:
+:::
+
+<br>
 
 ___Forma 4___
 
@@ -287,16 +325,22 @@ tribble(
 
 ## Datos ordenados
 
+:::small-4
 Los conjuntos de datos anteriores muestran los mismos datos organizados en cuatro formas diferentes. Sin embargo solo uno de ellos, el que es considerado como un __dato ordenado__, será más fácil para trabajar en <span style="color: orange">R</span>.
+:::
 
+:::small-4
 Para que un conjunto de datos sea considerado como dato ordenado, debe cumplir tres reglas:
+:::
 
+:::small-4
 + Cada variable debe colocarse en una columna:
+:::
 
 ```{r}
 #| eval: true
 #| echo: false
-#| out-width: '54%'
+#| out-width: '34%'
 #| fig-align: 'center'
 
 ggplot() +
@@ -306,25 +350,25 @@ ggplot() +
   annotate(geom = 'rect', xmin = 3.0, xmax = 3.5, ymin = 2.0, ymax = 2.5, colour = 'black', fill = 'white', size = 3.2) +
   annotate(geom = 'rect', xmin = 3.0, xmax = 3.5, ymin = 2.5, ymax = 3.0, colour = 'black', fill = 'white', size = 3.2) +
   annotate(geom = 'segment', x = 3.25, xend = 3.25, y = 0.9, yend = 3.1, colour = 'black', linetype = 'twodash', size = 3.2) +
-  annotate(geom = 'text', x = 3.25, y = 3.39, label = 'variable', family = 'gochi', size = 18, colour = 'black', angle = 35) +
+  annotate(geom = 'text', x = 3.25, y = 3.39, label = 'variable', family = 'gochi', size = 12, colour = 'black', angle = 35) +
   annotate(geom = 'rect', xmin = 3.5, xmax = 4.0, ymin = 1.0, ymax = 1.5, colour = 'black', fill = 'white', size = 3.2) +
   annotate(geom = 'rect', xmin = 3.5, xmax = 4.0, ymin = 1.5, ymax = 2.0, colour = 'black', fill = 'white', size = 3.2) +
   annotate(geom = 'rect', xmin = 3.5, xmax = 4.0, ymin = 2.0, ymax = 2.5, colour = 'black', fill = 'white', size = 3.2) +
   annotate(geom = 'rect', xmin = 3.5, xmax = 4.0, ymin = 2.5, ymax = 3.0, colour = 'black', fill = 'white', size = 3.2) +
   annotate(geom = 'segment', x = 3.75, xend = 3.75, y = 0.9, yend = 3.1, colour = 'black', linetype = 'twodash', size = 3.2) +
-  annotate(geom = 'text', x = 3.75, y = 3.39, label = 'variable', family = 'gochi', size = 18, colour = 'black', angle = 35) +
+  annotate(geom = 'text', x = 3.75, y = 3.39, label = 'variable', family = 'gochi', size = 12, colour = 'black', angle = 35) +
   annotate(geom = 'rect', xmin = 4.0, xmax = 4.5, ymin = 1.0, ymax = 1.5, colour = 'black', fill = 'white', size = 3.2) +
   annotate(geom = 'rect', xmin = 4.0, xmax = 4.5, ymin = 1.5, ymax = 2.0, colour = 'black', fill = 'white', size = 3.2) +
   annotate(geom = 'rect', xmin = 4.0, xmax = 4.5, ymin = 2.0, ymax = 2.5, colour = 'black', fill = 'white', size = 3.2) +
   annotate(geom = 'rect', xmin = 4.0, xmax = 4.5, ymin = 2.5, ymax = 3.0, colour = 'black', fill = 'white', size = 3.2) +
   annotate(geom = 'segment', x = 4.25, xend = 4.25, y = 0.9, yend = 3.1, colour = 'black', linetype = 'twodash', size = 3.2) +
-  annotate(geom = 'text', x = 4.25, y = 3.39, label = 'variable', family = 'gochi', size = 18, colour = 'black', angle = 35) +
+  annotate(geom = 'text', x = 4.25, y = 3.39, label = 'variable', family = 'gochi', size = 12, colour = 'black', angle = 35) +
   annotate(geom = 'rect', xmin = 4.5, xmax = 5.0, ymin = 1.0, ymax = 1.5, colour = 'black', fill = 'white', size = 3.2) +
   annotate(geom = 'rect', xmin = 4.5, xmax = 5.0, ymin = 1.5, ymax = 2.0, colour = 'black', fill = 'white', size = 3.2) +
   annotate(geom = 'rect', xmin = 4.5, xmax = 5.0, ymin = 2.0, ymax = 2.5, colour = 'black', fill = 'white', size = 3.2) +
   annotate(geom = 'rect', xmin = 4.5, xmax = 5.0, ymin = 2.5, ymax = 3.0, colour = 'black', fill = 'white', size = 3.2) +
   annotate(geom = 'segment', x = 4.75, xend = 4.75, y = 0.9, yend = 3.1, colour = 'black', linetype = 'twodash', size = 3.2) +
-  annotate(geom = 'text', x = 4.75, y = 3.39, label = 'variable', family = 'gochi', size = 18, colour = 'black', angle = 35) +
+  annotate(geom = 'text', x = 4.75, y = 3.39, label = 'variable', family = 'gochi', size = 12, colour = 'black', angle = 35) +
   scale_y_continuous(limits = c(0.88, 3.7)) +
   theme_void() +
   theme(axis.text = element_blank(),
@@ -334,16 +378,23 @@ ggplot() +
 
 ## Datos ordenados
 
+:::small-4
 Los conjuntos de datos anteriores muestran los mismos datos organizados en cuatro formas diferentes. Sin embargo solo uno de ellos, el que es considerado como un __dato ordenado__, será más fácil para trabajar en <span style="color: orange">R</span>.
+:::
 
+:::small-4
 Para que un conjunto de datos sea considerado como dato ordenado, debe cumplir tres reglas:
+:::
 
+
+:::small-4
 + Cada observación debe colocarse en una fila:
+:::
 
 ```{r}
 #| eval: true
 #| echo: false
-#| out-width: '54%'
+#| out-width: '34%'
 #| fig-align: 'center'
 
 ggplot() +
@@ -368,10 +419,10 @@ ggplot() +
   annotate(geom = 'segment', x = 2.9, xend = 5.1, y = 1.75, yend = 1.75, colour = 'black', linetype = 'twodash', size = 3.2) +
   annotate(geom = 'segment', x = 2.9, xend = 5.1, y = 2.25, yend = 2.25, colour = 'black', linetype = 'twodash', size = 3.2) +
   annotate(geom = 'segment', x = 2.9, xend = 5.1, y = 2.75, yend = 2.75, colour = 'black', linetype = 'twodash', size = 3.2) +
-  annotate(geom = 'text', x = 2.7, y = 1.25, label = 'fila', family = 'gochi', size = 18, colour = 'black', angle = 35) +
-  annotate(geom = 'text', x = 2.7, y = 1.75, label = 'fila', family = 'gochi', size = 18, colour = 'black', angle = 35) +
-  annotate(geom = 'text', x = 2.7, y = 2.25, label = 'fila', family = 'gochi', size = 18, colour = 'black', angle = 35) +
-  annotate(geom = 'text', x = 2.7, y = 2.75, label = 'fila', family = 'gochi', size = 18, colour = 'black', angle = 35) +
+  annotate(geom = 'text', x = 2.7, y = 1.25, label = 'fila', family = 'gochi', size = 12, colour = 'black', angle = 35) +
+  annotate(geom = 'text', x = 2.7, y = 1.75, label = 'fila', family = 'gochi', size = 12, colour = 'black', angle = 35) +
+  annotate(geom = 'text', x = 2.7, y = 2.25, label = 'fila', family = 'gochi', size = 12, colour = 'black', angle = 35) +
+  annotate(geom = 'text', x = 2.7, y = 2.75, label = 'fila', family = 'gochi', size = 12, colour = 'black', angle = 35) +
   scale_x_continuous(limits = c(2.6, 5.2)) +
   theme_void() +
   theme(axis.text = element_blank(),
@@ -381,16 +432,22 @@ ggplot() +
 
 ## Datos ordenados
 
+:::small-4
 Los conjuntos de datos anteriores muestran los mismos datos organizados en cuatro formas diferentes. Sin embargo solo uno de ellos, el que es considerado como un __dato ordenado__, será más fácil para trabajar en <span style="color: orange">R</span>.
+:::
 
+:::small-4
 Para que un conjunto de datos sea considerado como dato ordenado, debe cumplir tres reglas:
+:::
 
+:::small-4
 + Cada valor debe colocarse en una celda:
+:::
 
 ```{r}
 #| eval: true
 #| echo: false
-#| out-width: '54%'
+#| out-width: '34%'
 #| fig-align: 'center'
 
 Valores <- data.frame(
@@ -418,7 +475,7 @@ ggplot() +
   annotate(geom = 'rect', xmin = 4.5, xmax = 5.0, ymin = 2.5, ymax = 3.0, colour = 'black', fill = 'white', size = 3.2) +
   geom_point(data = Valores, aes(x, y), colour = 'black', fill = 'black', size = 9.4, alpha = 0.6) +
   annotate(geom = 'segment', x = 2.8, xend = 3.25, y = 2.65, yend = 2.75, colour = 'black', size = 2.2) +
-  annotate(geom = 'text', x = 2.45, y = 2.65, label = 'valor', family = 'gochi', size = 18, colour = 'black') +
+  annotate(geom = 'text', x = 2.45, y = 2.65, label = 'valor', family = 'gochi', size = 12, colour = 'black') +
   scale_x_continuous(limits = c(2.2, 5.2)) +
   theme_void() +
   theme(axis.text = element_blank(),
@@ -428,4 +485,279 @@ ggplot() +
 
 ## Ordenando los datos con el paquete <span style="color: orange">tidyr</span>
 
+:::small-4
 El paquete <span style="color: orange">tidyr</span> tiene como objetivo ayudar a ordenar los datos desordenados. Para esto, este paquete contiene varias funciones:
+:::
+
+### <span style="color: orange">pivot_wider()</span>
+
+:::small-4
+La función <span style="color: orange">pivot_wider()</span> es usada cuando se tiene una variable dispersa en múltiples filas.
+:::
+
+```{r}
+#| eval: true
+#| echo: false
+#| out-width: '34%'
+#| fig-align: 'center'
+
+ggplot() +
+  geom_blank() +
+  
+  annotate(geom = 'rect', xmin = 1.5, xmax = 2.0, ymin = 0.5, ymax = 1.0, colour = 'black', fill = 'black', alpha = 0.2) +
+  annotate(geom = 'rect', xmin = 1.5, xmax = 2.0, ymin = 1.0, ymax = 1.5, colour = 'black', fill = 'black', alpha = 0.2) +
+  annotate(geom = 'rect', xmin = 1.5, xmax = 2.0, ymin = 1.5, ymax = 2.0, colour = 'black', fill = 'black', alpha = 0.2) +
+  annotate(geom = 'rect', xmin = 1.5, xmax = 2.0, ymin = 2.0, ymax = 2.5, colour = 'black', fill = 'black', alpha = 0.2) +
+  annotate(geom = 'rect', xmin = 1.5, xmax = 2.0, ymin = 2.5, ymax = 3.0, colour = 'black', fill = 'black', alpha = 0.2) +
+  annotate(geom = 'rect', xmin = 2.0, xmax = 2.5, ymin = 0.5, ymax = 1.0, colour = 'cyan', fill = 'cyan', alpha = 0.2) +
+  annotate(geom = 'rect', xmin = 2.0, xmax = 2.5, ymin = 1.0, ymax = 1.5, colour = 'cyan', fill = 'cyan', alpha = 0.2) +
+  annotate(geom = 'rect', xmin = 2.0, xmax = 2.5, ymin = 1.5, ymax = 2.0, colour = 'yellow', fill = 'yellow', alpha = 0.2) +
+  annotate(geom = 'rect', xmin = 2.0, xmax = 2.5, ymin = 2.0, ymax = 2.5, colour = 'yellow', fill = 'yellow', alpha = 0.2) +
+  annotate(geom = 'rect', xmin = 2.0, xmax = 2.5, ymin = 2.5, ymax = 3.0, colour = 'black', fill = 'black', alpha = 0.2) +
+  annotate(geom = 'rect', xmin = 2.5, xmax = 3.0, ymin = 0.5, ymax = 1.0, colour = 'cyan', fill = 'cyan', alpha = 0.2) +
+  annotate(geom = 'rect', xmin = 2.5, xmax = 3.0, ymin = 1.0, ymax = 1.5, colour = 'cyan', fill = 'cyan', alpha = 0.2) +
+  annotate(geom = 'rect', xmin = 2.5, xmax = 3.0, ymin = 1.5, ymax = 2.0, colour = 'yellow', fill = 'yellow', alpha = 0.2) +
+  annotate(geom = 'rect', xmin = 2.5, xmax = 3.0, ymin = 2.0, ymax = 2.5, colour = 'yellow', fill = 'yellow', alpha = 0.2) +
+  annotate(geom = 'rect', xmin = 2.5, xmax = 3.0, ymin = 2.5, ymax = 3.0, colour = 'black', fill = 'black', alpha = 0.2) +
+  annotate(geom = 'text', x = 1.75, y = 2.75, label = 'X1', family = 'gochi', size = 12, colour = 'black') +
+  annotate(geom = 'text', x = 2.25, y = 2.75, label = 'V1', family = 'gochi', size = 12, colour = 'black') +
+  annotate(geom = 'text', x = 2.75, y = 2.75, label = 'V2', family = 'gochi', size = 12, colour = 'black') +
+  annotate(geom = 'text', x = 1.75, y = 2.25, label = 'A', family = 'gochi', size = 12, colour = 'black') +
+  annotate(geom = 'text', x = 1.75, y = 1.75, label = 'B', family = 'gochi', size = 12, colour = 'black') +
+  annotate(geom = 'text', x = 1.75, y = 1.25, label = 'A', family = 'gochi', size = 12, colour = 'black') +
+  annotate(geom = 'text', x = 1.75, y = 0.75, label = 'B', family = 'gochi', size = 12, colour = 'black') +
+  annotate(geom = 'text', x = 2.25, y = 2.25, label = 'X2', family = 'gochi', size = 12, colour = 'black') +
+  annotate(geom = 'text', x = 2.25, y = 1.75, label = 'X2', family = 'gochi', size = 12, colour = 'black') +
+  annotate(geom = 'text', x = 2.25, y = 1.25, label = 'X3', family = 'gochi', size = 12, colour = 'black') +
+  annotate(geom = 'text', x = 2.25, y = 0.75, label = 'X3', family = 'gochi', size = 12, colour = 'black') +
+  annotate(geom = 'text', x = 2.75, y = 2.25, label = '1', family = 'gochi', size = 12, colour = 'black') +
+  annotate(geom = 'text', x = 2.75, y = 1.75, label = '2', family = 'gochi', size = 12, colour = 'black') +
+  annotate(geom = 'text', x = 2.75, y = 1.25, label = '0.1', family = 'gochi', size = 12, colour = 'black') +
+  annotate(geom = 'text', x = 2.75, y = 0.75, label = '0.2', family = 'gochi', size = 12, colour = 'black') +
+  annotate(geom = 'rect', xmin = 4.5, xmax = 5.0, ymin = 1.0, ymax = 1.5, colour = 'black', fill = 'black', alpha = 0.2) +
+  annotate(geom = 'rect', xmin = 4.5, xmax = 5.0, ymin = 1.5, ymax = 2.0, colour = 'black', fill = 'black', alpha = 0.2) +
+  annotate(geom = 'rect', xmin = 4.5, xmax = 5.0, ymin = 2.0, ymax = 2.5, colour = 'black', fill = 'black', alpha = 0.2) +
+  annotate(geom = 'rect', xmin = 5.0, xmax = 5.5, ymin = 1.0, ymax = 1.5, colour = 'yellow', fill = 'yellow', alpha = 0.2) +
+  annotate(geom = 'rect', xmin = 5.0, xmax = 5.5, ymin = 1.5, ymax = 2.0, colour = 'yellow', fill = 'yellow', alpha = 0.2) +
+  annotate(geom = 'rect', xmin = 5.0, xmax = 5.5, ymin = 2.0, ymax = 2.5, colour = 'yellow', fill = 'yellow', alpha = 0.2) +
+  annotate(geom = 'rect', xmin = 5.5, xmax = 6.0, ymin = 1.0, ymax = 1.5, colour = 'cyan', fill = 'cyan', alpha = 0.2) +
+  annotate(geom = 'rect', xmin = 5.5, xmax = 6.0, ymin = 1.5, ymax = 2.0, colour = 'cyan', fill = 'cyan', alpha = 0.2) +
+  annotate(geom = 'rect', xmin = 5.5, xmax = 6.0, ymin = 2.0, ymax = 2.5, colour = 'cyan', fill = 'cyan', alpha = 0.2) +
+  annotate(geom = 'text', x = 4.75, y = 2.25, label = 'X1', family = 'gochi', size = 12, colour = 'black') +
+  annotate(geom = 'text', x = 4.75, y = 1.75, label = 'A', family = 'gochi', size = 12, colour = 'black') +
+  annotate(geom = 'text', x = 4.75, y = 1.25, label = 'B', family = 'gochi', size = 12, colour = 'black') +
+  annotate(geom = 'text', x = 5.25, y = 2.25, label = 'X2', family = 'gochi', size = 12, colour = 'black') +
+  annotate(geom = 'text', x = 5.25, y = 1.75, label = '1', family = 'gochi', size = 12, colour = 'black') +
+  annotate(geom = 'text', x = 5.25, y = 1.25, label = '2', family = 'gochi', size = 12, colour = 'black') +
+  annotate(geom = 'text', x = 5.75, y = 2.25, label = 'X3', family = 'gochi', size = 12, colour = 'black') +
+  annotate(geom = 'text', x = 5.75, y = 1.75, label = '0.1', family = 'gochi', size = 12, colour = 'black') +
+  annotate(geom = 'text', x = 5.75, y = 1.25, label = '0.2', family = 'gochi', size = 12, colour = 'black') +
+  annotate(geom = 'segment', x = 3.08, xend = 4.25, y = 2.25, yend = 2.25, colour = 'black', size = 3.2, arrow = arrow(length = unit(0.5, 'cm'))) +
+  theme_void() +
+  theme(axis.text = element_blank(),
+        axis.ticks = element_blank(),
+        axis.title = element_blank())
+```
+
+:::small-4
+La estructura de esta función es:
+:::
+
+```{r}
+#| eval: true
+#| echo: false
+
+decorate("pivot_wider(data, names_from, values_from)", error = TRUE, eval=FALSE) %>% 
+  flair("data", color = 'cornflowerblue') %>% 
+  flair("names_from", color = 'red') %>% 
+  flair("values_from", color = 'orange')
+```
+
+:::small-4
+<span style="color: cornflowerblue">data</span> = nombre del conjunto de datos a ordenar.<br>
+:::
+:::small-4
+<span style="color: red">names_from</span> = nombre de la columna que contiene más de una variable.<br>
+:::
+:::small-4
+<span style="color: orange">values_from</span> = nombre de la columna que contiene los valores de las variables.
+:::
+
+## Ordenando los datos con el paquete <span style="color: orange">tidyr</span>
+
+:::small-4
+El paquete <span style="color: orange">tidyr</span> tiene como objetivo ayudar a ordenar los datos desordenados. Para esto, este paquete contiene varias funciones:
+:::
+
+### <span style="color: orange">pivot_longer()</span>
+
+:::small-4
+La función <span style="color: orange">pivot_longer()</span> arregla situaciones en donde las columnas no representan variables, sino valores de una misma variable.
+:::
+
+```{r}
+#| eval: true
+#| echo: false
+#| out-width: '34%'
+#| fig-align: 'center'
+
+ggplot() +
+  geom_blank() +
+  annotate(geom = 'rect', xmin = 8.0, xmax = 8.5, ymin = 0.5, ymax = 1.0, colour = 'black', fill = 'black', alpha = 0.2) +
+  annotate(geom = 'rect', xmin = 8.0, xmax = 8.5, ymin = 1.0, ymax = 1.5, colour = 'black', fill = 'black', alpha = 0.2) +
+  annotate(geom = 'rect', xmin = 8.0, xmax = 8.5, ymin = 1.5, ymax = 2.0, colour = 'black', fill = 'black', alpha = 0.2) +
+  annotate(geom = 'rect', xmin = 8.0, xmax = 8.5, ymin = 2.0, ymax = 2.5, colour = 'black', fill = 'black', alpha = 0.2) +
+  annotate(geom = 'rect', xmin = 8.0, xmax = 8.5, ymin = 2.5, ymax = 3.0, colour = 'black', fill = 'black', alpha = 0.2) +
+  annotate(geom = 'rect', xmin = 8.5, xmax = 9.0, ymin = 0.5, ymax = 1.0, colour = 'cyan', fill = 'cyan', alpha = 0.2) +
+  annotate(geom = 'rect', xmin = 8.5, xmax = 9.0, ymin = 1.0, ymax = 1.5, colour = 'cyan', fill = 'cyan', alpha = 0.2) +
+  annotate(geom = 'rect', xmin = 8.5, xmax = 9.0, ymin = 1.5, ymax = 2.0, colour = 'yellow', fill = 'yellow', alpha = 0.2) +
+  annotate(geom = 'rect', xmin = 8.5, xmax = 9.0, ymin = 2.0, ymax = 2.5, colour = 'yellow', fill = 'yellow', alpha = 0.2) +
+  annotate(geom = 'rect', xmin = 8.5, xmax = 9.0, ymin = 2.5, ymax = 3.0, colour = 'black', fill = 'black', alpha = 0.2) +
+  annotate(geom = 'rect', xmin = 9.0, xmax = 9.5, ymin = 0.5, ymax = 1.0, colour = 'cyan', fill = 'cyan', alpha = 0.2) +
+  annotate(geom = 'rect', xmin = 9.0, xmax = 9.5, ymin = 1.0, ymax = 1.5, colour = 'cyan', fill = 'cyan', alpha = 0.2) +
+  annotate(geom = 'rect', xmin = 9.0, xmax = 9.5, ymin = 1.5, ymax = 2.0, colour = 'yellow', fill = 'yellow', alpha = 0.2) +
+  annotate(geom = 'rect', xmin = 9.0, xmax = 9.5, ymin = 2.0, ymax = 2.5, colour = 'yellow', fill = 'yellow', alpha = 0.2) +
+  annotate(geom = 'rect', xmin = 9.0, xmax = 9.5, ymin = 2.5, ymax = 3.0, colour = 'black', fill = 'black', alpha = 0.2) +
+  annotate(geom = 'text', x = 8.25, y = 2.75, label = 'X1', family = 'gochi', size = 12, colour = 'black') +
+  annotate(geom = 'text', x = 8.75, y = 2.75, label = 'V1', family = 'gochi', size = 12, colour = 'black') +
+  annotate(geom = 'text', x = 9.25, y = 2.75, label = 'V2', family = 'gochi', size = 12, colour = 'black') +
+  annotate(geom = 'text', x = 8.25, y = 2.25, label = 'A', family = 'gochi', size = 12, colour = 'black') +
+  annotate(geom = 'text', x = 8.25, y = 1.75, label = 'B', family = 'gochi', size = 12, colour = 'black') +
+  annotate(geom = 'text', x = 8.25, y = 1.25, label = 'A', family = 'gochi', size = 12, colour = 'black') +
+  annotate(geom = 'text', x = 8.25, y = 0.75, label = 'B', family = 'gochi', size = 12, colour = 'black') +
+  annotate(geom = 'text', x = 8.75, y = 2.25, label = 'X2', family = 'gochi', size = 12, colour = 'black') +
+  annotate(geom = 'text', x = 8.75, y = 1.75, label = 'X2', family = 'gochi', size = 12, colour = 'black') +
+  annotate(geom = 'text', x = 8.75, y = 1.25, label = 'X3', family = 'gochi', size = 12, colour = 'black') +
+  annotate(geom = 'text', x = 8.75, y = 0.75, label = 'X3', family = 'gochi', size = 12, colour = 'black') +
+  annotate(geom = 'text', x = 9.25, y = 2.25, label = '1', family = 'gochi', size = 12, colour = 'black') +
+  annotate(geom = 'text', x = 9.25, y = 1.75, label = '2', family = 'gochi', size = 12, colour = 'black') +
+  annotate(geom = 'text', x = 9.25, y = 1.25, label = '0.1', family = 'gochi', size = 12, colour = 'black') +
+  annotate(geom = 'text', x = 9.25, y = 0.75, label = '0.2', family = 'gochi', size = 12, colour = 'black') +
+  annotate(geom = 'rect', xmin = 4.5, xmax = 5.0, ymin = 1.0, ymax = 1.5, colour = 'black', fill = 'black', alpha = 0.2) +
+  annotate(geom = 'rect', xmin = 4.5, xmax = 5.0, ymin = 1.5, ymax = 2.0, colour = 'black', fill = 'black', alpha = 0.2) +
+  annotate(geom = 'rect', xmin = 4.5, xmax = 5.0, ymin = 2.0, ymax = 2.5, colour = 'black', fill = 'black', alpha = 0.2) +
+  annotate(geom = 'rect', xmin = 5.0, xmax = 5.5, ymin = 1.0, ymax = 1.5, colour = 'yellow', fill = 'yellow', alpha = 0.2) +
+  annotate(geom = 'rect', xmin = 5.0, xmax = 5.5, ymin = 1.5, ymax = 2.0, colour = 'yellow', fill = 'yellow', alpha = 0.2) +
+  annotate(geom = 'rect', xmin = 5.0, xmax = 5.5, ymin = 2.0, ymax = 2.5, colour = 'yellow', fill = 'yellow', alpha = 0.2) +
+  annotate(geom = 'rect', xmin = 5.5, xmax = 6.0, ymin = 1.0, ymax = 1.5, colour = 'cyan', fill = 'cyan', alpha = 0.2) +
+  annotate(geom = 'rect', xmin = 5.5, xmax = 6.0, ymin = 1.5, ymax = 2.0, colour = 'cyan', fill = 'cyan', alpha = 0.2) +
+  annotate(geom = 'rect', xmin = 5.5, xmax = 6.0, ymin = 2.0, ymax = 2.5, colour = 'cyan', fill = 'cyan', alpha = 0.2) +
+  annotate(geom = 'text', x = 4.75, y = 2.25, label = 'X1', family = 'gochi', size = 12, colour = 'black') +
+  annotate(geom = 'text', x = 4.75, y = 1.75, label = 'A', family = 'gochi', size = 12, colour = 'black') +
+  annotate(geom = 'text', x = 4.75, y = 1.25, label = 'B', family = 'gochi', size = 12, colour = 'black') +
+  annotate(geom = 'text', x = 5.25, y = 2.25, label = 'X2', family = 'gochi', size = 12, colour = 'black') +
+  annotate(geom = 'text', x = 5.25, y = 1.75, label = '1', family = 'gochi', size = 12, colour = 'black') +
+  annotate(geom = 'text', x = 5.25, y = 1.25, label = '2', family = 'gochi', size = 12, colour = 'black') +
+  annotate(geom = 'text', x = 5.75, y = 2.25, label = 'X3', family = 'gochi', size = 12, colour = 'black') +
+  annotate(geom = 'text', x = 5.75, y = 1.75, label = '0.1', family = 'gochi', size = 12, colour = 'black') +
+  annotate(geom = 'text', x = 5.75, y = 1.25, label = '0.2', family = 'gochi', size = 12, colour = 'black') +
+  annotate(geom = 'segment', x = 6.2, xend = 7.8, y = 2.25, yend = 2.25, colour = 'black', size = 3.2, arrow = arrow(length = unit(0.5, 'cm'))) +
+  theme_void() +
+  theme(axis.text = element_blank(),
+        axis.ticks = element_blank(),
+        axis.title = element_blank())
+```
+
+:::small-4
+La estructura de esta función es:
+:::
+
+```{r}
+#| eval: true
+#| echo: false
+
+decorate('pivot_longer(data, cols, names_to, values_to)', error = TRUE, eval=FALSE) %>% 
+  flair('data', color = 'cornflowerblue') %>% 
+  flair('cols', color = 'red') %>% 
+  flair('names_to', color = 'orange') %>%
+  flair('values_to', color = 'green')
+```
+
+:::small-4
+<span style="color: cornflowerblue">data</span> = nombre del conjunto de datos a ordenar.<br>
+:::
+:::small-4
+<span style="color: red">cols</span> = nombre de las columnas que pueden ser una sola variable.<br>
+:::
+:::small-4
+<span style="color: orange">names_to</span> = nombre de la columna a crear a partir de los datos almacenados como columnas.</br>
+:::
+:::small-4
+<span style="color: green">values_to</span> = nombre de la columna a crear a partir de los datos almacenados como valores.
+:::
+
+## Ordenando los datos con el paquete <span style="color: orange">tidyr</span>
+
+:::small-4
+El paquete <span style="color: orange">tidyr</span> tiene como objetivo ayudar a ordenar los datos desordenados. Para esto, este paquete contiene varias funciones:
+:::
+
+### <span style="color: orange">separate()</span> y <span style="color: orange">unite()</span>
+
+:::small-4
+La función <span style="color: orange">separate()</span> permite dividir una columna en múltiples columnas, tomando como separador algún símbolo, mientras que la función <span style="color: orange">unite()</span> permite tomar múltiples columnas y las une en una única columna, separando los elementos mediante un separador.
+:::
+
+:::small-4
+La estructura de estas funciones son:
+:::
+
+::: columns
+
+::: {.column width="50%" style="text-align: center;"}
+
+```{r}
+#| eval: true
+#| echo: false
+
+decorate('separate(data, col, into, sep)', error = TRUE, eval=FALSE) %>% 
+  flair('data', color = 'cornflowerblue') %>% 
+  flair('col', color = 'red') %>% 
+  flair('into', color = 'orange') %>%
+  flair('sep', color = 'green')
+```
+
+:::small-4
+<span style="color: cornflowerblue">data</span> = nombre del conjunto de datos a ordenar.<br>
+:::
+:::small-4
+<span style="color: red">col</span> = nombre de la columna que se quiere dividir.<br>
+:::
+:::small-4
+<span style="color: orange">into</span> = nombres de las nuevas columnas.</br>
+:::
+:::small-4
+<span style="color: green">sep</span> = símbolo con el que se dividio el valor de la variable en una misma columna.
+:::
+
+:::
+
+::: {.column width="50%" style="text-align: center;"}
+
+```{r}
+#| eval: true
+#| echo: false
+
+decorate('unite(data, col, sep)', error = TRUE, eval=FALSE) %>% 
+  flair('data', color = 'cornflowerblue') %>% 
+  flair('col', color = 'red') %>% 
+  flair('sep', color = 'orange')
+```
+
+:::small-4
+<span style="color: cornflowerblue">data</span> = nombre del conjunto de datos a ordenar.<br>
+:::
+:::small-4
+<span style="color: red">col</span> = nombre de la nueva columna que se quiere crear.<br>
+:::
+:::small-4
+<span style="color: orange">sep</span> = símbolo con el que se va a separar los valores de la variable en una misma columna.
+:::
+
+:::
+
+:::
+
+## Tu turno!!
+
+### Click [aquí](https://jorge-leonardo-lopez-martinez.shinyapps.io/Practica_clase_3a/) por favor.
